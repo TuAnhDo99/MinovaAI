@@ -320,7 +320,7 @@ const Index = () => {
                   {
                     title: "Tăng cường sự tự tin",
                     description:
-                      "Tôn lên v�� đẹp tự nhiên của bạn và cảm thấy tự tin hơn mỗi ngày",
+                      "Tôn lên vẻ đẹp tự nhiên của bạn và cảm thấy tự tin hơn mỗi ngày",
                     icon: Zap,
                   },
                 ].map((benefit, index) => (
