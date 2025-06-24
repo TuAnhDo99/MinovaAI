@@ -473,45 +473,7 @@ const Index = () => {
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-minova-sage/30 to-minova-pearl/30 rounded-full blur-xl"></div>
             </div>
 
-            {/* Video Highlights */}
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
-              {[
-                {
-                  icon: "🔍",
-                  title: "Phân tích AI",
-                  description:
-                    "Xem cách AI phân tích khuôn mặt và da của bạn trong thời gian thực",
-                },
-                {
-                  icon: "💄",
-                  title: "Gợi ý trang điểm",
-                  description:
-                    "Khám phá những gợi ý trang điểm được cá nhân hóa cho từng đặc điểm",
-                },
-                {
-                  icon: "👗",
-                  title: "Phong cách thời trang",
-                  description:
-                    "Tìm hiểu cách MinovaAI gợi ý trang phục phù hợp với phong cách của bạn",
-                },
-              ].map((highlight, index) => (
-                <Card
-                  key={index}
-                  className="border-0 shadow-lg bg-white/80 backdrop-blur-sm"
-                >
-                  <CardContent className="p-6 text-center space-y-3">
-                    <div className="text-3xl mb-3">{highlight.icon}</div>
-                    <h3 className="text-lg font-semibold text-minova-charcoal">
-                      {highlight.title}
-                    </h3>
-                    <p className="text-minova-charcoal/70 text-sm">
-                      {highlight.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
+     
             {/* Call to Action below video */}
             <div className="text-center mt-12">
               <Button
