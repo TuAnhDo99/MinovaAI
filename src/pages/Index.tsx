@@ -454,9 +454,9 @@ const Index = () => {
                 <video
                   className="w-full h-full object-cover"
                   controls
-                  poster="https://images.pexels.com/photos/8294550/pexels-photo-8294550.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                  poster=""
                 >
-                  <source src="/minova-ai-intro.mp4" type="video/mp4" />
+                  <source src="/assets/video.mp4" type="video/mp4" />
                   Trình duyệt của bạn không hỗ trợ video HTML5.
                 </video>
 
@@ -473,7 +473,6 @@ const Index = () => {
               <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-minova-sage/30 to-minova-pearl/30 rounded-full blur-xl"></div>
             </div>
 
-     
             {/* Call to Action below video */}
             <div className="text-center mt-12">
               <Button
