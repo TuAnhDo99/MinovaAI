@@ -372,7 +372,7 @@ const Index = () => {
                 name: "Sarah Chen",
                 age: "28",
                 quote:
-                  "MinovaAI đã hoàn toàn thay đổi cách tôi tiếp cận việc chăm sóc da. Những gợi ý cá nhân hóa thực sự hiệu quả!",
+                  "MinovaAI đã hoàn toàn thay đổi cách tôi tiếp cận việc chăm sóc da. Những gợi ý cá nh��n hóa thực sự hiệu quả!",
                 rating: 5,
                 image:
                   "bg-gradient-to-br from-minova-rose-light to-minova-rose",
@@ -424,6 +424,104 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Video Introduction Section */}
+      <section className="py-20 px-6 bg-gradient-to-br from-minova-pearl via-minova-blush to-white">
+        <div className="container mx-auto">
+          <div className="text-center space-y-8 mb-12">
+            <Badge className="bg-minova-rose-light text-minova-rose-dark border-0 mx-auto">
+              🎥 Video giới thiệu sản phẩm
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold text-minova-charcoal max-w-3xl mx-auto">
+              Khám phá MinovaAI trong
+              <span className="block bg-gradient-to-r from-minova-rose to-minova-rose-dark bg-clip-text text-transparent">
+                40 giây
+              </span>
+            </h2>
+            <p className="text-xl text-minova-charcoal/70 max-w-2xl mx-auto">
+              Xem cách MinovaAI hoạt động và biến đổi thói quen làm đẹp của bạn
+              với công nghệ AI tiên tiến
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="relative">
+              {/* Video Container */}
+              <div className="relative aspect-video rounded-3xl overflow-hidden shadow-2xl bg-gradient-to-br from-minova-rose/10 to-minova-rose-dark/10">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  poster="https://images.pexels.com/photos/8294550/pexels-photo-8294550.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                >
+                  <source src="/minova-ai-intro.mp4" type="video/mp4" />
+                  Trình duyệt của bạn không hỗ trợ video HTML5.
+                </video>
+
+                {/* Play Button Overlay (shown before video starts) */}
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                  <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-0 h-0 border-l-[12px] border-l-minova-rose border-y-[8px] border-y-transparent ml-1"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative Elements */}
+              <div className="absolute -top-4 -right-4 w-32 h-32 bg-gradient-to-br from-minova-rose/20 to-minova-rose-light/20 rounded-full blur-xl"></div>
+              <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-gradient-to-br from-minova-sage/30 to-minova-pearl/30 rounded-full blur-xl"></div>
+            </div>
+
+            {/* Video Highlights */}
+            <div className="grid md:grid-cols-3 gap-8 mt-12">
+              {[
+                {
+                  icon: "🔍",
+                  title: "Phân tích AI",
+                  description:
+                    "Xem cách AI phân tích khuôn mặt và da của bạn trong thời gian thực",
+                },
+                {
+                  icon: "💄",
+                  title: "Gợi ý trang điểm",
+                  description:
+                    "Khám phá những gợi ý trang điểm được cá nhân hóa cho từng đặc điểm",
+                },
+                {
+                  icon: "👗",
+                  title: "Phong cách thời trang",
+                  description:
+                    "Tìm hiểu cách MinovaAI gợi ý trang phục phù hợp với phong cách của bạn",
+                },
+              ].map((highlight, index) => (
+                <Card
+                  key={index}
+                  className="border-0 shadow-lg bg-white/80 backdrop-blur-sm"
+                >
+                  <CardContent className="p-6 text-center space-y-3">
+                    <div className="text-3xl mb-3">{highlight.icon}</div>
+                    <h3 className="text-lg font-semibold text-minova-charcoal">
+                      {highlight.title}
+                    </h3>
+                    <p className="text-minova-charcoal/70 text-sm">
+                      {highlight.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Call to Action below video */}
+            <div className="text-center mt-12">
+              <Button
+                size="lg"
+                className="bg-minova-rose hover:bg-minova-rose-dark text-white text-lg px-8 py-6"
+              >
+                Dùng thử ngay bây giờ
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </div>
           </div>
         </div>
       </section>
