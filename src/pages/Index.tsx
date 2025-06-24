@@ -42,26 +42,26 @@ const Index = () => {
                 href="#features"
                 className="text-minova-charcoal hover:text-minova-rose transition-colors"
               >
-                Features
+                Tính năng
               </a>
               <a
                 href="#how-it-works"
                 className="text-minova-charcoal hover:text-minova-rose transition-colors"
               >
-                How It Works
+                Cách thức hoạt động
               </a>
               <a
                 href="#testimonials"
                 className="text-minova-charcoal hover:text-minova-rose transition-colors"
               >
-                Reviews
+                Đánh giá
               </a>
               <Button
                 variant="outline"
                 size="sm"
                 className="border-minova-rose text-minova-rose hover:bg-minova-rose hover:text-white"
               >
-                Sign In
+                Đăng nhập
               </Button>
             </nav>
           </div>
@@ -75,18 +75,18 @@ const Index = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <Badge className="bg-minova-rose-light text-minova-rose-dark border-0">
-                  ✨ AI-Powered Beauty Assistant
+                  ✨ Trợ lý làm đẹp AI
                 </Badge>
                 <h1 className="text-5xl lg:text-6xl font-bold text-minova-charcoal leading-tight">
-                  Your Personal
+                  Gương thông minh
                   <span className="block bg-gradient-to-r from-minova-rose to-minova-rose-dark bg-clip-text text-transparent">
-                    Beauty Mirror
+                    Cá nhân của bạn
                   </span>
                 </h1>
                 <p className="text-xl text-minova-charcoal/70 max-w-lg">
-                  MinovaAI transforms your daily beauty routine with AI-powered
-                  skincare analysis, personalized makeup recommendations, and
-                  style guidance that enhances your natural beauty.
+                  MinovaAI biến đổi thói quen làm đẹp hằng ngày của bạn với công
+                  nghệ phân tích da AI, g��i ý trang điểm cá nhân hóa và hướng
+                  dẫn phong cách giúp tôn lên vẻ đẹp tự nhiên của bạn.
                 </p>
               </div>
 
@@ -95,14 +95,14 @@ const Index = () => {
                   size="lg"
                   className="bg-minova-rose hover:bg-minova-rose-dark text-white text-lg px-8 py-6"
                 >
-                  Try MinovaAI Today
+                  Dùng thử MinovaAI ngay
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button
                   size="lg"
                   className="bg-minova-rose-dark hover:bg-minova-rose text-white text-lg px-8 py-6 shadow-lg"
                 >
-                  Book a Demo
+                  Đặt lịch demo
                 </Button>
               </div>
 
@@ -117,7 +117,7 @@ const Index = () => {
                     ))}
                   </div>
                   <span className="text-minova-charcoal/70">
-                    10,000+ happy users
+                    10,000+ người dùng hạnh phúc
                   </span>
                 </div>
                 <div className="flex items-center space-x-1">
@@ -128,7 +128,7 @@ const Index = () => {
                     />
                   ))}
                   <span className="text-minova-charcoal/70 ml-2">
-                    4.9/5 rating
+                    4.9/5 điểm
                   </span>
                 </div>
               </div>
@@ -138,7 +138,7 @@ const Index = () => {
               <div className="relative z-10">
                 <img
                   src="https://images.pexels.com/photos/8294550/pexels-photo-8294550.jpeg?auto=compress&cs=tinysrgb&w=800"
-                  alt="MinovaAI Smart Mirror - Modern AI-powered beauty device"
+                  alt="Gương thông minh MinovaAI - Thiết bị làm đẹp AI hiện đại"
                   className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
                 />
               </div>
@@ -154,11 +154,11 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl font-bold text-minova-charcoal">
-              How MinovaAI Works
+              Cách MinovaAI hoạt động
             </h2>
             <p className="text-xl text-minova-charcoal/70 max-w-2xl mx-auto">
-              Three simple steps to transform your beauty routine with
-              AI-powered insights
+              Ba bước đơn giản để biến đổi thói quen làm đẹp của bạn với những
+              thông tin được cung cấp bởi AI
             </p>
           </div>
 
@@ -166,25 +166,25 @@ const Index = () => {
             {[
               {
                 step: "01",
-                title: "Face Analysis",
+                title: "Phân tích khuôn mặt",
                 description:
-                  "Look into your MinovaAI mirror for an instant AI-powered analysis of your skin, features, and current look.",
+                  "Nhìn vào gương MinovaAI để có được phân tích ngay lập tức bằng AI về làn da, đường nét và diện mạo hiện tại của bạn.",
                 icon: Scan,
                 color: "from-minova-rose to-minova-rose-dark",
               },
               {
                 step: "02",
-                title: "Smart Recommendations",
+                title: "Gợi ý thông minh",
                 description:
-                  "Receive personalized skincare routines, makeup suggestions, and styling tips tailored to your unique features.",
+                  "Nhận được quy trình chăm sóc da cá nhân hóa, gợi ý trang điểm và mẹo phong cách phù hợp với đặc điểm riêng của bạn.",
                 icon: Sparkles,
                 color: "from-minova-rose-light to-minova-rose",
               },
               {
                 step: "03",
-                title: "Daily Enhancement",
+                title: "Nâng cao hằng ngày",
                 description:
-                  "Follow your customized beauty routine and watch your confidence grow with each personalized recommendation.",
+                  "Thực hiện quy trình làm đẹp tùy chỉnh của bạn và xem sự tự tin của bạn phát triển qua từng gợi ý cá nhân hóa.",
                 icon: Heart,
                 color: "from-minova-sage to-minova-rose-light",
               },
@@ -226,41 +226,41 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl font-bold text-minova-charcoal">
-              Powered by Advanced AI
+              Được hỗ trợ bởi AI tiên tiến
             </h2>
             <p className="text-xl text-minova-charcoal/70 max-w-2xl mx-auto">
-              Cutting-edge technology that understands your unique beauty and
-              enhances it naturally
+              Công nghệ tiên tiến hiểu được vẻ đẹp độc đáo của bạn và tôn lên
+              một cách tự nhiên
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
-                title: "Face Detection",
+                title: "Nhận diện khuôn mặt",
                 description:
-                  "Advanced facial recognition technology analyzes your features with precision",
+                  "Công nghệ nhận diện khuôn mặt tiên tiến phân tích các đặc điểm của bạn một cách chính xác",
                 icon: Scan,
                 gradient: "from-minova-rose to-minova-rose-dark",
               },
               {
-                title: "Skincare Analysis",
+                title: "Phân tích da",
                 description:
-                  "AI-powered skin assessment identifies your skin type and specific needs",
+                  "Đánh giá da được hỗ trợ bởi AI xác định loại da và nhu cầu cụ thể của bạn",
                 icon: Sparkles,
                 gradient: "from-minova-rose-light to-minova-rose",
               },
               {
-                title: "Makeup Tips",
+                title: "Mẹo trang điểm",
                 description:
-                  "Personalized makeup recommendations that complement your natural features",
+                  "Gợi ý trang điểm cá nhân hóa bổ sung cho các đặc điểm tự nhiên của bạn",
                 icon: Palette,
                 gradient: "from-minova-sage to-minova-rose-light",
               },
               {
-                title: "Outfit Coordination",
+                title: "Phối đồ trang phục",
                 description:
-                  "Smart styling suggestions that match your personal style and occasions",
+                  "Gợi ý phong cách thông minh phù hợp với phong cách cá nhân và dịp của bạn",
                 icon: ShirtIcon,
                 gradient: "from-minova-pearl to-minova-sage",
               },
@@ -295,32 +295,32 @@ const Index = () => {
             <div className="space-y-8">
               <div className="space-y-4">
                 <h2 className="text-4xl font-bold text-minova-charcoal">
-                  Why Choose MinovaAI?
+                  Tại sao chọn MinovaAI?
                 </h2>
                 <p className="text-xl text-minova-charcoal/70">
-                  Experience the future of beauty with personalized AI
-                  technology that grows with you
+                  Trải nghiệm tương lai của ngành làm đẹp với công nghệ AI cá
+                  nhân hóa phát triển cùng bạn
                 </p>
               </div>
 
               <div className="space-y-6">
                 {[
                   {
-                    title: "Ultimate Convenience",
+                    title: "Tiện lợi tối đa",
                     description:
-                      "Get expert beauty advice instantly, right in your own mirror",
+                      "Nhận lời khuyên làm đẹp chuyên gia ngay lập tức, ngay tại gương của chính bạn",
                     icon: Clock,
                   },
                   {
-                    title: "True Personalization",
+                    title: "Cá nhân hóa thực sự",
                     description:
-                      "AI learns your preferences and skin changes over time",
+                      "AI học hỏi sở thích của bạn và những thay đổi của làn da theo thời gian",
                     icon: Target,
                   },
                   {
-                    title: "Confidence Boost",
+                    title: "Tăng cường sự tự tin",
                     description:
-                      "Enhance your natural beauty and feel more confident every day",
+                      "Tôn lên v�� đẹp tự nhiên của bạn và cảm thấy tự tin hơn mỗi ngày",
                     icon: Zap,
                   },
                 ].map((benefit, index) => (
@@ -344,7 +344,7 @@ const Index = () => {
             <div className="relative">
               <img
                 src="https://images.pexels.com/photos/7321265/pexels-photo-7321265.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Woman using skincare products in mirror - MinovaAI beauty routine"
+                alt="Phụ nữ sử dụng sản phẩm chăm sóc da trong gương - Quy trình làm đẹp MinovaAI"
                 className="w-full rounded-3xl shadow-2xl"
               />
               <div className="absolute inset-0 bg-gradient-to-tr from-minova-rose/10 to-transparent rounded-3xl"></div>
@@ -358,11 +358,11 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-4xl font-bold text-minova-charcoal">
-              What Our Users Say
+              Người dùng nói gì về chúng tôi
             </h2>
             <p className="text-xl text-minova-charcoal/70 max-w-2xl mx-auto">
-              Real stories from women who transformed their beauty routine with
-              MinovaAI
+              Những câu chuyện thực từ những phụ nữ đã biến đổi thói quen làm
+              đẹp với MinovaAI
             </p>
           </div>
 
@@ -372,7 +372,7 @@ const Index = () => {
                 name: "Sarah Chen",
                 age: "28",
                 quote:
-                  "MinovaAI completely changed how I approach skincare. The personalized recommendations actually work!",
+                  "MinovaAI đã hoàn toàn thay đổi cách tôi tiếp cận việc chăm sóc da. Những gợi ý cá nhân hóa thực sự hiệu quả!",
                 rating: 5,
                 image:
                   "bg-gradient-to-br from-minova-rose-light to-minova-rose",
@@ -381,7 +381,7 @@ const Index = () => {
                 name: "Emma Rodriguez",
                 age: "34",
                 quote:
-                  "I never knew how to do my makeup properly until MinovaAI showed me techniques that work for my face shape.",
+                  "Tôi chưa bao giờ biết cách trang điểm đúng cách cho đến khi MinovaAI chỉ cho tôi những kỹ thuật phù hợp với khuôn mặt của mình.",
                 rating: 5,
                 image:
                   "bg-gradient-to-br from-minova-sage to-minova-rose-light",
@@ -390,7 +390,7 @@ const Index = () => {
                 name: "Jessica Taylor",
                 age: "25",
                 quote:
-                  "The outfit suggestions are amazing! I feel so much more confident with my style choices now.",
+                  "Những gợi ý trang phục thật tuyệt vời! Tôi cảm thấy tự tin hơn rất nhiều với những lựa chọn phong cách của mình.",
                 rating: 5,
                 image: "bg-gradient-to-br from-minova-pearl to-minova-sage",
               },
@@ -417,7 +417,7 @@ const Index = () => {
                         {testimonial.name}
                       </h4>
                       <p className="text-sm text-minova-charcoal/60">
-                        Age {testimonial.age}
+                        {testimonial.age} tuổi
                       </p>
                     </div>
                   </div>
@@ -433,11 +433,11 @@ const Index = () => {
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto space-y-8">
             <h2 className="text-4xl lg:text-5xl font-bold text-white">
-              Ready to Transform Your Beauty Routine?
+              Sẵn sàng biến đổi thói quen làm đẹp của bạn?
             </h2>
             <p className="text-xl text-white/90">
-              Join thousands of women who have discovered their most confident
-              selves with MinovaAI
+              Tham gia cùng hàng nghìn phụ nữ đã khám phá phiên bản tự tin nhất
+              của bản thân với MinovaAI
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -445,29 +445,29 @@ const Index = () => {
                 size="lg"
                 className="bg-white text-minova-rose hover:bg-white/90 text-lg px-8 py-6"
               >
-                Start Your Journey Today
+                Bắt đầu hành trình ngay hôm nay
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
                 size="lg"
                 className="bg-white text-minova-rose-dark hover:bg-minova-pearl border-2 border-white text-lg px-8 py-6 font-semibold shadow-lg"
               >
-                Book a Free Demo
+                Đặt lịch demo miễn phí
               </Button>
             </div>
 
             <div className="flex items-center justify-center space-x-8 pt-8">
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">10,000+</div>
-                <div className="text-white/80">Happy Users</div>
+                <div className="text-white/80">Người dùng hạnh phúc</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">4.9/5</div>
-                <div className="text-white/80">Rating</div>
+                <div className="text-white/80">Điểm đánh giá</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-white">30 Day</div>
-                <div className="text-white/80">Free Trial</div>
+                <div className="text-2xl font-bold text-white">30 ngày</div>
+                <div className="text-white/80">Dùng thử miễn phí</div>
               </div>
             </div>
           </div>
@@ -486,8 +486,8 @@ const Index = () => {
                 <span className="text-2xl font-bold">MinovaAI</span>
               </div>
               <p className="text-white/70">
-                Your personal AI beauty assistant that enhances your natural
-                beauty and boosts your confidence every day.
+                Trợ lý AI làm đẹp cá nhân của bạn giúp tôn lên vẻ đẹp tự nhiên
+                và tăng cường sự tự tin mỗi ngày.
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-minova-rose transition-colors cursor-pointer">
@@ -503,14 +503,14 @@ const Index = () => {
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Product</h3>
+              <h3 className="text-lg font-semibold">Sản phẩm</h3>
               <ul className="space-y-2 text-white/70">
                 <li>
                   <a
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    Features
+                    Tính năng
                   </a>
                 </li>
                 <li>
@@ -518,7 +518,7 @@ const Index = () => {
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    How It Works
+                    Cách thức hoạt động
                   </a>
                 </li>
                 <li>
@@ -526,7 +526,7 @@ const Index = () => {
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    Pricing
+                    Giá cả
                   </a>
                 </li>
                 <li>
@@ -534,21 +534,21 @@ const Index = () => {
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    Reviews
+                    Đánh giá
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Company</h3>
+              <h3 className="text-lg font-semibold">Công ty</h3>
               <ul className="space-y-2 text-white/70">
                 <li>
                   <a
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    About Us
+                    Về chúng tôi
                   </a>
                 </li>
                 <li>
@@ -556,7 +556,7 @@ const Index = () => {
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    Careers
+                    Tuyển dụng
                   </a>
                 </li>
                 <li>
@@ -564,7 +564,7 @@ const Index = () => {
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    Press
+                    Báo chí
                   </a>
                 </li>
                 <li>
@@ -572,14 +572,14 @@ const Index = () => {
                     href="#"
                     className="hover:text-minova-rose transition-colors"
                   >
-                    Partners
+                    Đối tác
                   </a>
                 </li>
               </ul>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">Contact</h3>
+              <h3 className="text-lg font-semibold">Liên hệ</h3>
               <div className="space-y-3 text-white/70">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5" />
@@ -599,8 +599,8 @@ const Index = () => {
 
           <div className="border-t border-white/20 mt-12 pt-8 text-center text-white/60">
             <p>
-              &copy; 2024 MinovaAI. All rights reserved. | Privacy Policy |
-              Terms of Service
+              &copy; 2024 MinovaAI. Tất cả quyền được bảo lưu. | Chính sách bảo
+              mật | Điều khoản dịch vụ
             </p>
           </div>
         </div>
