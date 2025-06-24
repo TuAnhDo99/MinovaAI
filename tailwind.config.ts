@@ -52,6 +52,17 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // MinovaAI Brand Colors
+        minova: {
+          rose: "hsl(var(--minova-rose))",
+          "rose-light": "hsl(var(--minova-rose-light))",
+          "rose-dark": "hsl(var(--minova-rose-dark))",
+          blush: "hsl(var(--minova-blush))",
+          cream: "hsl(var(--minova-cream))",
+          pearl: "hsl(var(--minova-pearl))",
+          charcoal: "hsl(var(--minova-charcoal))",
+          sage: "hsl(var(--minova-sage))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
