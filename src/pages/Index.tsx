@@ -99,9 +99,8 @@ const Index = () => {
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
                 <Button
-                  variant="outline"
                   size="lg"
-                  className="border-minova-rose text-minova-rose hover:bg-minova-rose hover:text-white text-lg px-8 py-6"
+                  className="bg-minova-rose-dark hover:bg-minova-rose text-white text-lg px-8 py-6 shadow-lg"
                 >
                   Book a Demo
                 </Button>
@@ -450,9 +449,8 @@ const Index = () => {
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
               <Button
-                variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-minova-rose text-lg px-8 py-6"
+                className="bg-white text-minova-rose-dark hover:bg-minova-pearl border-2 border-white text-lg px-8 py-6 font-semibold shadow-lg"
               >
                 Book a Free Demo
               </Button>
