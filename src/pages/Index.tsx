@@ -85,7 +85,7 @@ const Index = () => {
                 </h1>
                 <p className="text-xl text-minova-charcoal/70 max-w-lg">
                   MinovaAI biến đổi thói quen làm đẹp hằng ngày của bạn với công
-                  nghệ phân tích da AI, g��i ý trang điểm cá nhân hóa và hướng
+                  nghệ phân tích da AI, gợi ý trang điểm cá nhân hóa và hướng
                   dẫn phong cách giúp tôn lên vẻ đẹp tự nhiên của bạn.
                 </p>
               </div>
