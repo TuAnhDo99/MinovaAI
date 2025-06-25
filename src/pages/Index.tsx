@@ -20,7 +20,225 @@ import {
   Mail,
   Phone,
   MapPin,
+  ChevronLeft,
+  ChevronRight,
 } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback, useEffect, useState } from "react";
+
+const ProductionCarousel = () => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "center",
+  });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setSelectedIndex(emblaApi.selectedScrollSnap());
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
+
+  const productImages = [
+    {
+      id: 1,
+      title: "MinovaAI Pro Mirror",
+      description:
+        "Gương thông minh cao cấp với màn hình 32 inch 4K, camera AI và đèn LED chuyên nghiệp cho trải nghiệm làm đẹp hoàn hảo",
+      image:
+        "https://images.pexels.com/photos/8294550/pexels-photo-8294550.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Gương thông minh MinovaAI Pro Mirror",
+      price: "15.900.000₫",
+      features: ["Màn hình 4K", "Camera AI", "Đèn LED chuyên nghiệp"],
+    },
+    {
+      id: 2,
+      title: "MinovaAI Smart Compact",
+      description:
+        "Phiên bản nhỏ gọn hoàn hảo cho phòng ngủ hoặc bàn trang điểm với đầy đủ tính năng AI thông minh",
+      image:
+        "https://images.pexels.com/photos/7321265/pexels-photo-7321265.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Gương thông minh MinovaAI Smart Compact",
+      price: "8.900.000₫",
+      features: [
+        "Thiết kế nhỏ gọn",
+        "AI phân tích da",
+        "Trang điểm thông minh",
+      ],
+    },
+    {
+      id: 3,
+      title: "MinovaAI Studio Edition",
+      description:
+        "Dành cho salon chuyên nghiệp với tính năng chia sẻ màn hình, lưu trữ dữ liệu khách hàng và báo cáo chi tiết",
+      image:
+        "https://images.pexels.com/photos/6923539/pexels-photo-6923539.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Gương thông minh MinovaAI Studio Edition cho salon",
+      price: "25.900.000₫",
+      features: ["Quản lý khách hàng", "Báo cáo chi tiết", "Chia sẻ màn hình"],
+    },
+    {
+      id: 4,
+      title: "MinovaAI Mobile App",
+      description:
+        "Ứng dụng di động đồng bộ với gương thông minh, theo dõi tiến trình và nhận gợi ý làm đẹp mọi lúc mọi nơi",
+      image:
+        "https://images.pexels.com/photos/3783512/pexels-photo-3783512.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Ứng dụng MinovaAI Mobile App",
+      price: "Miễn phí",
+      features: ["Đồng bộ dữ liệu", "Theo dõi tiến trình", "Gợi ý hàng ngày"],
+    },
+    {
+      id: 5,
+      title: "MinovaAI Premium Package",
+      description:
+        "Gói dịch vụ cao cấp bao gồm tư vấn cá nhân hóa 1:1, cập nhật AI hàng tháng và hỗ trợ ưu tiên 24/7",
+      image:
+        "https://images.pexels.com/photos/12432851/pexels-photo-12432851.jpeg?auto=compress&cs=tinysrgb&w=1200",
+      alt: "Gói dịch vụ MinovaAI Premium Package",
+      price: "2.900.000₫/năm",
+      features: ["Tư vấn 1:1", "Cập nhật AI", "Hỗ trợ ưu tiên"],
+    },
+  ];
+
+  return (
+    <div className="relative">
+      <div className="overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {productImages.map((item, index) => (
+            <div
+              key={item.id}
+              className="flex-[0_0_100%] min-w-0 pl-4 md:flex-[0_0_90%] lg:flex-[0_0_80%]"
+            >
+              <Card className="mx-auto max-w-4xl border-0 shadow-2xl overflow-hidden bg-white">
+                <div className="relative">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className="w-full h-96 md:h-[500px] object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+
+                  {/* Content Overlay */}
+                  <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
+                    <div className="max-w-2xl">
+                      <div className="flex items-center gap-4 mb-4">
+                        <Badge className="bg-minova-rose text-white border-0">
+                          Sản phẩm {index + 1}/5
+                        </Badge>
+                        <div className="text-2xl font-bold text-minova-rose-light">
+                          {item.price}
+                        </div>
+                      </div>
+
+                      <h3 className="text-3xl md:text-4xl font-bold mb-4">
+                        {item.title}
+                      </h3>
+
+                      <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
+                        {item.description}
+                      </p>
+
+                      {/* Features */}
+                      <div className="flex flex-wrap gap-2 mb-6">
+                        {item.features.map((feature, idx) => (
+                          <div
+                            key={idx}
+                            className="bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full text-sm"
+                          >
+                            {feature}
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* CTA Button */}
+                      <Button className="bg-minova-rose hover:bg-minova-rose-dark text-white">
+                        Tìm hiểu thêm
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="flex items-center justify-center gap-4 mt-8">
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={scrollPrev}
+          disabled={!canScrollPrev}
+          className="w-12 h-12 rounded-full border-minova-rose text-minova-rose hover:bg-minova-rose hover:text-white disabled:opacity-50"
+        >
+          <ChevronLeft className="w-5 h-5" />
+        </Button>
+
+        {/* Dots Indicator */}
+        <div className="flex space-x-2">
+          {productImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => emblaApi?.scrollTo(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === selectedIndex
+                  ? "bg-minova-rose scale-125"
+                  : "bg-minova-rose/30 hover:bg-minova-rose/60"
+              }`}
+            />
+          ))}
+        </div>
+
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={scrollNext}
+          disabled={!canScrollNext}
+          className="w-12 h-12 rounded-full border-minova-rose text-minova-rose hover:bg-minova-rose hover:text-white disabled:opacity-50"
+        >
+          <ChevronRight className="w-5 h-5" />
+        </Button>
+      </div>
+
+      {/* Product Stats */}
+      {/* <div className="grid md:grid-cols-3 gap-8 mt-16">
+        <div className="text-center">
+          <div className="text-4xl font-bold text-minova-rose mb-2">5</div>
+          <div className="text-minova-charcoal/70">Sản phẩm & Dịch vụ</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-bold text-minova-rose mb-2">2 năm</div>
+          <div className="text-minova-charcoal/70">Bảo hành toàn diện</div>
+        </div>
+        <div className="text-center">
+          <div className="text-4xl font-bold text-minova-rose mb-2">24/7</div>
+          <div className="text-minova-charcoal/70">Hỗ trợ khách hàng</div>
+        </div>
+      </div> */}
+    </div>
+  );
+};
 
 const Index = () => {
   return (
@@ -51,10 +269,22 @@ const Index = () => {
                 Cách thức hoạt động
               </a>
               <a
+                href="#products"
+                className="text-minova-charcoal hover:text-minova-rose transition-colors"
+              >
+                Sản phẩm
+              </a>
+              <a
                 href="#testimonials"
                 className="text-minova-charcoal hover:text-minova-rose transition-colors"
               >
                 Đánh giá
+              </a>
+              <a
+                href="#video"
+                className="text-minova-charcoal hover:text-minova-rose transition-colors"
+              >
+                Video
               </a>
               <Button
                 variant="outline"
@@ -137,7 +367,7 @@ const Index = () => {
             <div className="relative">
               <div className="relative z-10">
                 <img
-                  src="https://images.pexels.com/photos/8294550/pexels-photo-8294550.jpeg?auto=compress&cs=tinysrgb&w=800"
+                  src="/hero-image.jpg"
                   alt="Gương thông minh MinovaAI - Thiết bị làm đẹp AI hiện đại"
                   className="w-full max-w-md mx-auto rounded-3xl shadow-2xl"
                 />
@@ -372,7 +602,7 @@ const Index = () => {
                 name: "Sarah Chen",
                 age: "28",
                 quote:
-                  "MinovaAI đã hoàn toàn thay đổi cách tôi tiếp cận việc chăm sóc da. Những gợi ý cá nh��n hóa thực sự hiệu quả!",
+                  "MinovaAI đã hoàn toàn thay đổi cách tôi tiếp cận việc chăm sóc da. Những gợi ý cá nhân hóa thực sự hiệu quả!",
                 rating: 5,
                 image:
                   "bg-gradient-to-br from-minova-rose-light to-minova-rose",
@@ -428,8 +658,34 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Product Showcase Section */}
+      <section id="products" className="py-20 px-6 bg-white">
+        <div className="container mx-auto">
+          <div className="text-center space-y-4 mb-16">
+            <Badge className="bg-minova-rose-light text-minova-rose-dark border-0">
+              💎 Sản phẩm chất lượng cao
+            </Badge>
+            <h2 className="text-4xl font-bold text-minova-charcoal">
+              Dòng sản phẩm
+              <span className="block bg-gradient-to-r from-minova-rose to-minova-rose-dark bg-clip-text text-transparent">
+                MinovaAI
+              </span>
+            </h2>
+            <p className="text-xl text-minova-charcoal/70 max-w-2xl mx-auto">
+              Khám phá bộ sưu tập các sản phẩm và dịch vụ MinovaAI được thiết kế
+              để mang đến trải nghiệm làm đẹp hoàn hảo cho mọi nhu cầu
+            </p>
+          </div>
+
+          <ProductionCarousel />
+        </div>
+      </section>
+
       {/* Video Introduction Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-minova-pearl via-minova-blush to-white">
+      <section
+        id="video"
+        className="py-20 px-6 bg-gradient-to-br from-minova-pearl via-minova-blush to-white"
+      >
         <div className="container mx-auto">
           <div className="text-center space-y-8 mb-12">
             <Badge className="bg-minova-rose-light text-minova-rose-dark border-0 mx-auto">
@@ -454,9 +710,9 @@ const Index = () => {
                 <video
                   className="w-full h-full object-cover"
                   controls
-                  poster=""
+                  poster="https://images.pexels.com/photos/8294550/pexels-photo-8294550.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 >
-                  <source src="/assets/video.mp4" type="video/mp4" />
+                  <source src="/minova-ai-intro.mp4" type="video/mp4" />
                   Trình duyệt của bạn không hỗ trợ video HTML5.
                 </video>
 
@@ -546,7 +802,7 @@ const Index = () => {
               </div>
               <p className="text-white/70">
                 Trợ lý AI làm đẹp cá nhân của bạn giúp tôn lên vẻ đẹp tự nhiên
-                và tăng cường sự tự tin mỗi ngày.
+                và tăng cường sự tự tin mỗi ng��y.
               </p>
               <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center hover:bg-minova-rose transition-colors cursor-pointer">
